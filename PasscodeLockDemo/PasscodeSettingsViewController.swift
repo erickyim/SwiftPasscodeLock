@@ -95,7 +95,7 @@ class PasscodeSettingsViewController: UIViewController {
             NSLog("Success")
         }
 
-        passcodeLock.cancelCompletionCallback = { _ in
+        passcodeLock.cancelCompletionCallback = {
             NSLog("Cancelled")
         }
         

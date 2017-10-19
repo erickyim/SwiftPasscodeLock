@@ -43,7 +43,9 @@ open class PasscodeLock: PasscodeLockType {
         delegate?.passcodeLock(self, addedSignAtIndex: passcode.count - 1)
         
         if passcode.count >= configuration.passcodeLength {
-            
+            // Fix: Simultaneous accesses to 0x1c0a7f0f8, but modification requires exclusive access error
+            // https://stackoverflow.com/questions/45415901/simultaneous-accesses-to-0x1c0a7f0f8-but-modification-requires-exclusive-access
+            var lockState = self.lockState
             lockState.acceptPasscode(passcode, fromLock: self)
             passcode.removeAll(keepingCapacity: true)
         }
