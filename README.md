@@ -1,12 +1,12 @@
 # PasscodeLock
 A Swift implementation of passcode lock for iOS with TouchID authentication.
 
-Originally created by [@yankodimitrov](https://github.com/yankodimitrov/SwiftPasscodeLock), then forded by [@velikanov](https://github.com/velikanov/SwiftPasscodeLock) hope you're doing well.
+Originally created by [@yankodimitrov](https://github.com/yankodimitrov/SwiftPasscodeLock), then forded by [@velikanov](https://github.com/velikanov/SwiftPasscodeLock), then forded by [@erickyim](https://github.com/erickyim/SwiftPasscodeLock) hope you're doing well.
 
 <img src="https://raw.githubusercontent.com/yankodimitrov/SwiftPasscodeLock/master/passcode-lock.gif" height="386">
 
 ## Installation
-PasscodeLock requires Swift 3.0 and Xcode 8
+PasscodeLock branch v3 requires Swift 3.0 & Xcode 8; v4 requires Swift 4.0 & Xcode 9; 
 
 ### [CocoaPods](http://cocoapods.org/)
 
@@ -21,7 +21,7 @@ platform :ios, ‘8.0’
 use_frameworks!
 
 target 'your_target_name_here'
-pod 'PasscodeLock', :git => ‘https://github.com/oskarirauta/SwiftPasscodeLock.git'
+pod 'PasscodeLock', :git => ‘https://github.com/erickyim/SwiftPasscodeLock.git'
 ```
 
 Then, run the following command:
