@@ -6,7 +6,7 @@ Originally created by [@yankodimitrov](https://github.com/yankodimitrov/SwiftPas
 <img src="https://raw.githubusercontent.com/yankodimitrov/SwiftPasscodeLock/master/passcode-lock.gif" height="386">
 
 ## Installation
-PasscodeLock branch v3 requires Swift 3.0 & Xcode 8; v4 requires Swift 4.0 & Xcode 9; 
+PasscodeLock requires Swift 4.0 & Xcode 9 and branch v3 requires Swift 3.0 & Xcode 8.
 
 ### [CocoaPods](http://cocoapods.org/)
 
@@ -16,7 +16,7 @@ To integrate PasscodeLock into your Xcode project using CocoaPods, specify it in
 
 ```ruby
 source 'https://github.com/CocoaPods/Specs.git'
-platform :ios, ‘8.0’
+platform :ios, '8.0'
 
 use_frameworks!
 
@@ -34,7 +34,7 @@ $ pod install
 
 Add the following line to your [Cartfile](https://github.com/carthage/carthage)
 ```swift
-github “oskarirauta/SwiftPasscodeLock"
+github “erickyim/SwiftPasscodeLock"
 ```
 ## Usage
 
