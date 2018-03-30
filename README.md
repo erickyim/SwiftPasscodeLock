@@ -1,4 +1,7 @@
 # PasscodeLock
+
+[![Build Status](https://travis-ci.org/erickyim/SwiftPasscodeLock.svg?branch=master)](https://travis-ci.org/erickyim/SwiftPasscodeLock)
+
 A Swift implementation of passcode lock for iOS with TouchID authentication.
 
 Originally created by [@yankodimitrov](https://github.com/yankodimitrov/SwiftPasscodeLock), then forded by [@velikanov](https://github.com/velikanov/SwiftPasscodeLock), then forded by [@erickyim](https://github.com/erickyim/SwiftPasscodeLock) hope you're doing well.
