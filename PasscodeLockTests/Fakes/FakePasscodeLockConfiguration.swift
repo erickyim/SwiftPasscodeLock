@@ -9,7 +9,8 @@
 import Foundation
 
 class FakePasscodeLockConfiguration: PasscodeLockConfigurationType {
-    
+    var shouldDisableTouchIDButton: Bool = false
+    var shouldDismissOnTooManyAttempts: Bool = false
     let repository: PasscodeRepositoryType
     let passcodeLength = 4
     var isTouchIDAllowed = false
@@ -18,7 +19,7 @@ class FakePasscodeLockConfiguration: PasscodeLockConfigurationType {
     var touchIdReason: String? = nil
     
     init(repository: PasscodeRepositoryType) {
-        
+
         self.repository = repository
     }
 }

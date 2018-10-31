@@ -33,7 +33,6 @@
 		C9DC07E11B90BBFD007A4DD0 /* PasscodeLock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DC07E01B90BBFD007A4DD0 /* PasscodeLock.swift */; };
 		C9DC07E21B90BBFD007A4DD0 /* PasscodeLock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DC07E01B90BBFD007A4DD0 /* PasscodeLock.swift */; };
 		C9DC07E51B90BCF9007A4DD0 /* PasscodeLockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DC07E41B90BCF9007A4DD0 /* PasscodeLockTests.swift */; };
-		C9DC07E71B90C382007A4DD0 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9DC07E61B90C382007A4DD0 /* LocalAuthentication.framework */; };
 		C9DC07EA1B90C690007A4DD0 /* FakePasscodeState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DC07E91B90C690007A4DD0 /* FakePasscodeState.swift */; };
 		C9DC07EC1B90C72A007A4DD0 /* FakePasscodeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DC07EB1B90C72A007A4DD0 /* FakePasscodeRepository.swift */; };
 		C9DC07EE1B90C7CD007A4DD0 /* FakePasscodeLockConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DC07ED1B90C7CD007A4DD0 /* FakePasscodeLockConfiguration.swift */; };
@@ -137,7 +136,6 @@
 		C9DC07DD1B90BA06007A4DD0 /* PasscodeLockType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasscodeLockType.swift; sourceTree = "<group>"; };
 		C9DC07E01B90BBFD007A4DD0 /* PasscodeLock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasscodeLock.swift; sourceTree = "<group>"; };
 		C9DC07E41B90BCF9007A4DD0 /* PasscodeLockTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasscodeLockTests.swift; sourceTree = "<group>"; };
-		C9DC07E61B90C382007A4DD0 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
 		C9DC07E91B90C690007A4DD0 /* FakePasscodeState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakePasscodeState.swift; sourceTree = "<group>"; };
 		C9DC07EB1B90C72A007A4DD0 /* FakePasscodeRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakePasscodeRepository.swift; sourceTree = "<group>"; };
 		C9DC07ED1B90C7CD007A4DD0 /* FakePasscodeLockConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakePasscodeLockConfiguration.swift; sourceTree = "<group>"; };
@@ -166,7 +164,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9DC07E71B90C382007A4DD0 /* LocalAuthentication.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,7 +231,6 @@
 				C9DC07D21B90B1CE007A4DD0 /* Protocols */,
 				C9DC07D11B90B1CE007A4DD0 /* PasscodeLock */,
 				C9DC07D31B90B1CE007A4DD0 /* Views */,
-				C9DC07E61B90C382007A4DD0 /* LocalAuthentication.framework */,
 				C99EAF421B90B05700D61E1B /* PasscodeLock.h */,
 				C99EAF441B90B05700D61E1B /* Info.plist */,
 				C9DC07F71B90CF29007A4DD0 /* Functions.swift */,
@@ -466,25 +462,31 @@
 					C99EAF3E1B90B05700D61E1B = {
 						CreatedOnToolsVersion = 7.0;
 						LastSwiftMigration = 0900;
+						ProvisioningStyle = Manual;
 					};
 					C99EAF481B90B05700D61E1B = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = 34F2M4TXNK;
 						LastSwiftMigration = 0830;
 					};
 					C9D3DF0F1B91AD11008561EB = {
 						CreatedOnToolsVersion = 7.0;
-						DevelopmentTeam = WKSMSBBC3K;
-						LastSwiftMigration = 0900;
-						ProvisioningStyle = Manual;
+						DevelopmentTeam = 34F2M4TXNK;
+						LastSwiftMigration = "";
+						ProvisioningStyle = Automatic;
 					};
 					C9D3DF221B91AD11008561EB = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = 34F2M4TXNK;
 						LastSwiftMigration = 0900;
+						ProvisioningStyle = Automatic;
 						TestTargetID = C9D3DF0F1B91AD11008561EB;
 					};
 					C9D3DF2D1B91AD12008561EB = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = 34F2M4TXNK;
 						LastSwiftMigration = 0900;
+						ProvisioningStyle = Automatic;
 						TestTargetID = C9D3DF0F1B91AD11008561EB;
 					};
 				};
@@ -796,20 +798,24 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGN_STYLE = Manual;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = PasscodeLock/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yankodimitrov.PasscodeLock;
+				PRODUCT_BUNDLE_IDENTIFIER = com.erick.PasscodeLock;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -817,19 +823,23 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGN_STYLE = Manual;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = PasscodeLock/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yankodimitrov.PasscodeLock;
+				PRODUCT_BUNDLE_IDENTIFIER = com.erick.PasscodeLock;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
@@ -837,9 +847,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 34F2M4TXNK;
 				INFOPLIST_FILE = PasscodeLockTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yankodimitrov.PasscodeLockTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.erick.PasscodeLockTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "PasscodeLockTests/PasscodeLockTests-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -851,9 +862,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 34F2M4TXNK;
 				INFOPLIST_FILE = PasscodeLockTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yankodimitrov.PasscodeLockTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.erick.PasscodeLockTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "PasscodeLockTests/PasscodeLockTests-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
@@ -865,15 +877,16 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = WKSMSBBC3K;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 34F2M4TXNK;
 				INFOPLIST_FILE = PasscodeLockDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yankodimitrov.PasscodeLockDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.erick.PasscodeLockDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "25970795-4968-466c-b23f-4735b1363133";
-				PROVISIONING_PROFILE_SPECIFIER = anyApp;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -885,12 +898,13 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 34F2M4TXNK;
 				INFOPLIST_FILE = PasscodeLockDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yankodimitrov.PasscodeLockDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.erick.PasscodeLockDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
@@ -902,14 +916,18 @@
 		C9D3DF391B91AD12008561EB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 34F2M4TXNK;
 				INFOPLIST_FILE = PasscodeLockDemoTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yankodimitrov.PasscodeLockDemoTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.erick.PasscodeLockDemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PasscodeLockDemo.app/PasscodeLockDemo";
 			};
 			name = Debug;
@@ -917,14 +935,18 @@
 		C9D3DF3A1B91AD12008561EB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 34F2M4TXNK;
 				INFOPLIST_FILE = PasscodeLockDemoTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yankodimitrov.PasscodeLockDemoTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.erick.PasscodeLockDemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PasscodeLockDemo.app/PasscodeLockDemo";
 			};
 			name = Release;
@@ -932,13 +954,17 @@
 		C9D3DF3C1B91AD12008561EB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 34F2M4TXNK;
 				INFOPLIST_FILE = PasscodeLockDemoUITests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yankodimitrov.PasscodeLockDemoUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.erick.PasscodeLockDemoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TEST_TARGET_NAME = PasscodeLockDemo;
 				USES_XCTRUNNER = YES;
 			};
@@ -947,13 +973,17 @@
 		C9D3DF3D1B91AD12008561EB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 34F2M4TXNK;
 				INFOPLIST_FILE = PasscodeLockDemoUITests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yankodimitrov.PasscodeLockDemoUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.erick.PasscodeLockDemoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TEST_TARGET_NAME = PasscodeLockDemo;
 				USES_XCTRUNNER = YES;
 			};

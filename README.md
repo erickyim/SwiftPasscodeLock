@@ -4,12 +4,19 @@
 
 A Swift implementation of passcode lock for iOS with TouchID authentication.
 
-Originally created by [@yankodimitrov](https://github.com/yankodimitrov/SwiftPasscodeLock), then forded by [@velikanov](https://github.com/velikanov/SwiftPasscodeLock), then forded by [@erickyim](https://github.com/erickyim/SwiftPasscodeLock) hope you're doing well.
+Originally created by [@yankodimitrov](https://github.com/yankodimitrov/SwiftPasscodeLock), then forked by [@velikanov](https://github.com/velikanov/SwiftPasscodeLock),  [@erickyim](https://github.com/erickyim/SwiftPasscodeLock). hope you're doing well.
 
-<img src="https://raw.githubusercontent.com/yankodimitrov/SwiftPasscodeLock/master/passcode-lock.gif" height="386">
+<img src="https://raw.githubusercontent.com/erickyim/SwiftPasscodeLock/master/passcode-lock.gif" height="386">
+
+## Version
+
+| Version | Swift | Xcode   | Support |
+| ------- | ----- | -----   | ------- |
+| v4.2.0  | 4.2   | xcode10 | iOS 8.0 |
+| v4.0.0  | 4.0   | xcode9  | iOS 8.0 |
+| v3.0    | 3.0   | xcode8  | iOS 8.0 |
 
 ## Installation
-PasscodeLock requires Swift 4.0 & Xcode 9 and branch v3 requires Swift 3.0 & Xcode 8.
 
 ### [CocoaPods](http://cocoapods.org/)
 
@@ -23,22 +30,24 @@ platform :ios, '8.0'
 
 use_frameworks!
 
-target 'your_target_name_here'
-pod 'PasscodeLock', :git => ‘https://github.com/erickyim/SwiftPasscodeLock.git'
+target 'your_target_name'
+pod 'ESPasscodeLock', '~> 4.2.0'
 ```
 
 Then, run the following command:
 
-```bash
-$ pod install
+```sh
+pod install
 ```
 
 ### [Carthage](https://github.com/Carthage/Carthage)
 
 Add the following line to your [Cartfile](https://github.com/carthage/carthage)
+
 ```swift
-github “erickyim/SwiftPasscodeLock"
+github "erickyim/SwiftPasscodeLock"
 ```
+
 ## Usage
 
 - Create an implementation of the `PasscodeRepositoryType` protocol.
@@ -48,18 +57,18 @@ import UIKit
 import PasscodeLock
 
 class PasscodeRepository: PasscodeRepositoryType {
-    
+
     var hasPasscode: Bool = true
     var passcode: [String]?
-    
+
     func savePasscode(passcode: [String]) {}
-    
+
     func deletePasscode() {}
-    
+
 }
 ```
 
-- Create an implementation of the `PasscodeLockConfigurationType` protocol and set your preferred passcode lock configuration options. If you set the `maximumInccorectPasscodeAttempts` to a number greather than zero, when user will reach that number of incorrect passcode attempts a notification with name `PasscodeLockIncorrectPasscodeNotification` will be posted on the default `NSNotificationCenter`. 
+- Create an implementation of the `PasscodeLockConfigurationType` protocol and set your preferred passcode lock configuration options. If you set the `maximumInccorectPasscodeAttempts` to a number greather than zero, when user will reach that number of incorrect passcode attempts a notification with name `PasscodeLockIncorrectPasscodeNotification` will be posted on the default `NSNotificationCenter`.
 
 ```swift
 import UIKit
@@ -74,11 +83,11 @@ class PasscodeLockConfiguration: PasscodeLockConfigurationType {
     var shouldDisableTouchIDButton = true // Hides manual touchID activation button from enter code view
     var maximumInccorectPasscodeAttempts = 3 // Maximum incorrect passcode attempts
     var shouldDismissOnTooManyAttempts = true // When cancellation is available, dismiss code input view after too many wrong code attempts
-    
+
     init(repository: PasscodeRepositoryType) {
         self.repository = repository
     }
-    
+
     init() {
         self.repository = PasscodeRepository() // The repository that was created earlier
     }
@@ -88,6 +97,7 @@ class PasscodeLockConfiguration: PasscodeLockConfigurationType {
 - Create an instance of the `PasscodeLockPresenter` class. Next inside your `UIApplicationDelegate` implementation call it to present the passcode in `didFinishLaunchingWithOptions` and `applicationDidEnterBackground` methods. The passcode lock will be presented only if your user has set a passcode.
 
 - Allow your users to set a passcode by presenting the `PasscodeLockViewController` in `.SetPasscode` state:
+
 ```swift
 let configuration = ... // your implementation of the PasscodeLockConfigurationType protocol
 
@@ -99,6 +109,7 @@ presentViewController(passcodeViewController, animated: true, completion: nil)
 You can present the `PasscodeLockViewController` in one of the four initial states using the `LockState` enumeration options: `.enterPasscode`, `.enterOptionalPasscode`, `.setPasscode`, `.changePasscode`, `.removePasscode`.
 
 Following callbacks are available:
+
 ```swift
     open var successCallback: ((_ lock: PasscodeLockType) -> Void)?
     open var dismissCompletionCallback: (()->Void)?
@@ -117,13 +128,13 @@ The PasscodeLock will look for `PasscodeLockView.xib` inside your app bundle and
 
 Keep in mind that when using custom classes that are defined in another module, you'll need to set the Module field to that module's name in the Identity Inspector:
 
-<img src="https://raw.githubusercontent.com/oskarirauta/SwiftPasscodeLock/master/identity-inspector.png" height=“99”>
+<img src="https://raw.githubusercontent.com/erickyim/SwiftPasscodeLock/master/identity-inspector.png" height=“99”>
 
 Then connect the `view` outlet to the view of your `xib` file and make sure to conenct the remaining `IBOutlet`s and `IBAction`s.
 
 PasscodeLock comes with two view components: `PasscodeSignPlaceholderView` and `PasscodeSignButton` that you can use to create your own custom designs. Both classes are `@IBDesignable` and `@IBInspectable`, so you can see their appearance and change their properties right inside the interface builder:
 
-<img src="https://raw.githubusercontent.com/oskarirauta/SwiftPasscodeLock/master/passcode-view.png" height="270">
+<img src="https://raw.githubusercontent.com/erickyim/SwiftPasscodeLock/master/passcode-view.png" height="270">
 
 ### Localization
 
