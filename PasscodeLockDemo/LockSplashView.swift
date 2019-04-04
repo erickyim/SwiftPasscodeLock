@@ -14,7 +14,7 @@ open class LockSplashView: UIView {
         
         let image = UIImage(named: "fake-logo")
         let view = UIImageView(image: image)
-        view.contentMode = UIViewContentMode.center
+        view.contentMode = UIView.ContentMode.center
         view.translatesAutoresizingMaskIntoConstraints = false
         
         return view

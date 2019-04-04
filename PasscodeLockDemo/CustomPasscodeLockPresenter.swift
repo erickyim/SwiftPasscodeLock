@@ -32,21 +32,21 @@ class CustomPasscodeLockPresenter: PasscodeLockPresenter {
         notificationCenter.addObserver(
             self,
             selector: #selector(CustomPasscodeLockPresenter.applicationDidLaunched),
-            name: NSNotification.Name.UIApplicationDidFinishLaunching,
+            name: UIApplication.didFinishLaunchingNotification,
             object: nil
         )
         
         notificationCenter.addObserver(
             self,
             selector: #selector(CustomPasscodeLockPresenter.applicationDidEnterBackground),
-            name: NSNotification.Name.UIApplicationDidEnterBackground,
+            name: UIApplication.didEnterBackgroundNotification,
             object: nil
         )
         
         notificationCenter.addObserver(
             self,
             selector: #selector(CustomPasscodeLockPresenter.applicationDidBecomeActive),
-            name: NSNotification.Name.UIApplicationDidBecomeActive,
+            name: UIApplication.didBecomeActiveNotification,
             object: nil
         )
     }
