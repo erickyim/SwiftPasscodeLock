@@ -1,6 +1,13 @@
 # PasscodeLock
 
 [![Build Status](https://travis-ci.org/erickyim/SwiftPasscodeLock.svg?branch=master)](https://travis-ci.org/erickyim/SwiftPasscodeLock)
+<a href="https://github.com/erickyim/SwiftPasscodeLock">
+        <img src="https://img.shields.io/cocoapods/p/ESPasscodeLock.svg" alt="Platforms">
+    </a>
+<img src="https://img.shields.io/badge/Swift-5.0-orange.svg" />
+<a href="https://cocoapods.org/pods/ESPasscodeLock">
+        <img src="https://img.shields.io/cocoapods/v/ESPasscodeLock.svg" alt="CocoaPods" />
+    </a>
 
 A Swift implementation of passcode lock for iOS with TouchID authentication.
 
