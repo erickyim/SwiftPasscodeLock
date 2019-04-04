@@ -10,11 +10,12 @@ Originally created by [@yankodimitrov](https://github.com/yankodimitrov/SwiftPas
 
 ## Version
 
-| Version | Swift | Xcode   | Support |
-| ------- | ----- | -----   | ------- |
-| v4.2.0  | 4.2   | xcode10 | iOS 8.0 |
-| v4.0.0  | 4.0   | xcode9  | iOS 8.0 |
-| v3.0    | 3.0   | xcode8  | iOS 8.0 |
+| Version | Swift | Xcode     | Support |
+| ------- | ----- | -----     | ------- |
+| v5.0.0  | 5.0   | xcode10.2 | iOS 8.0 |
+| v4.2.0  | 4.2   | xcode10   | iOS 8.0 |
+| v4.0.0  | 4.0   | xcode9    | iOS 8.0 |
+| v3.0    | 3.0   | xcode8    | iOS 8.0 |
 
 ## Installation
 
