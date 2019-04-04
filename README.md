@@ -2,12 +2,12 @@
 
 [![Build Status](https://travis-ci.org/erickyim/SwiftPasscodeLock.svg?branch=master)](https://travis-ci.org/erickyim/SwiftPasscodeLock)
 <a href="https://github.com/erickyim/SwiftPasscodeLock">
-        <img src="https://img.shields.io/cocoapods/p/ESPasscodeLock.svg" alt="Platforms">
-    </a>
+  <img src="https://img.shields.io/cocoapods/p/ESPasscodeLock.svg" alt="Platforms">
+</a>
 <img src="https://img.shields.io/badge/Swift-5.0-orange.svg" />
 <a href="https://cocoapods.org/pods/ESPasscodeLock">
-        <img src="https://img.shields.io/cocoapods/v/ESPasscodeLock.svg" alt="CocoaPods" />
-    </a>
+  <img src="https://img.shields.io/cocoapods/v/ESPasscodeLock.svg" alt="CocoaPods" />
+</a>
 
 A Swift implementation of passcode lock for iOS with TouchID authentication.
 
@@ -18,7 +18,7 @@ Originally created by [@yankodimitrov](https://github.com/yankodimitrov/SwiftPas
 ## Version
 
 | Version | Swift | Xcode     | Support |
-| ------- | ----- | -----     | ------- |
+| ------- | ----- | --------- | ------- |
 | v5.0.0  | 5.0   | xcode10.2 | iOS 8.0 |
 | v4.2.0  | 4.2   | xcode10   | iOS 8.0 |
 | v4.0.0  | 4.0   | xcode9    | iOS 8.0 |
