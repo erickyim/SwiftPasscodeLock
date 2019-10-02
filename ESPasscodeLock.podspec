@@ -14,8 +14,7 @@ Pod::Spec.new do |s|
                    'PasscodeLock/*/*.{swift}'
 
   s.resources = [
-    'PasscodeLock/Views/PasscodeLockView.xib',
-    'PasscodeLock/Views/DarkPasscodeLockView.xib',
+    'PasscodeLock/Views/*.xib',
     'PasscodeLock/en.lproj/*'
   ]
   s.ios.framework = 'LocalAuthentication'
