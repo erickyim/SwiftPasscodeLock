@@ -11,8 +11,6 @@
 
 A Swift implementation of passcode lock for iOS with TouchID authentication.
 
-Originally created by [@yankodimitrov](https://github.com/yankodimitrov/SwiftPasscodeLock), then forked by [@velikanov](https://github.com/velikanov/SwiftPasscodeLock),  [@erickyim](https://github.com/erickyim/SwiftPasscodeLock). hope you're doing well.
-
 <img src="https://raw.githubusercontent.com/erickyim/SwiftPasscodeLock/master/passcode-lock.gif" height="386">
 
 ## Version
@@ -39,7 +37,7 @@ platform :ios, '8.0'
 use_frameworks!
 
 target 'your_target_name'
-pod 'ESPasscodeLock', '~> 4.2.0'
+pod 'ESPasscodeLock', '~> 5.0.1'
 ```
 
 Then, run the following command:
