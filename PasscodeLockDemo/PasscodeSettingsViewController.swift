@@ -70,7 +70,7 @@ class PasscodeSettingsViewController: UIViewController {
                 lock.repository.deletePasscode()
             }
         }
-        
+
         present(passcodeVC, animated: true, completion: nil)
     }
     
@@ -80,7 +80,7 @@ class PasscodeSettingsViewController: UIViewController {
         let config = PasscodeLockConfiguration(repository: repo)
         
         let passcodeLock = PasscodeLockViewController(state: .changePasscode, configuration: config)
-        
+
         present(passcodeLock, animated: true, completion: nil)
     }
     
@@ -89,7 +89,7 @@ class PasscodeSettingsViewController: UIViewController {
         let repo = UserDefaultsPasscodeRepository()
         let config = PasscodeLockConfiguration(repository: repo)
         
-        let passcodeLock = PasscodeLockViewController(state: .enterOptionalPasscode, configuration: config, darkUI: sender.tag == 0 ? false : true)
+        let passcodeLock = PasscodeLockViewController(state: .enterOptionalPasscode, configuration: config)
         
         passcodeLock.successCallback = { lock in
             NSLog("Success")
