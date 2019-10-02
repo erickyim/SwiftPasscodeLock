@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.swift_version = '5.0'
   s.ios.deployment_target = '8.0'
   s.license = { type: 'MIT', file: 'LICENSE.txt' }
-  s.summary = 'An iOS passcode lock with Touch ID authentication written in Swift.'
+  s.summary = 'An iOS passcode lock with TouchID / FaceID authentication written in Swift.'
   s.homepage = 'https://github.com/erickyim/SwiftPasscodeLock'
   s.authors = { 'Oskari Rauta' => '', 'Yanko Dimitrov' => '', 'Chris Ziogas' => '' }
   s.source = { git: 'https://github.com/erickyim/SwiftPasscodeLock.git', tag: 'v5.0.1' }

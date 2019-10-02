@@ -9,7 +9,7 @@
   <img src="https://img.shields.io/cocoapods/v/ESPasscodeLock.svg" alt="CocoaPods" />
 </a>
 
-A Swift implementation of passcode lock for iOS with TouchID authentication.
+A Swift implementation of passcode lock for iOS with TouchID or FaceID authentication. Now suppport Dark Mode.
 
 <img src="https://raw.githubusercontent.com/erickyim/SwiftPasscodeLock/master/passcode-lock.gif" height="386">
 
